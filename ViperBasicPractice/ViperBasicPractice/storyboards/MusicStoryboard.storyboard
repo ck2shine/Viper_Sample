@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music View Controller-->
+        <scene sceneID="dWi-SQ-rbU">
+            <objects>
+                <viewController id="ggq-BM-4LD" customClass="MusicViewController" customModule="ViperBasicPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pfM-Bb-mNP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qs3-SC-npX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="789"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe8-6X-lGF">
+                                <rect key="frame" x="20" y="843" width="374" height="39"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Start Fetch Data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartButtonAction:" destination="ggq-BM-4LD" eventType="touchUpInside" id="2o4-zG-obk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K79-bg-AaZ" firstAttribute="trailing" secondItem="Qs3-SC-npX" secondAttribute="trailing" id="M68-dV-s2K"/>
+                            <constraint firstItem="qe8-6X-lGF" firstAttribute="leading" secondItem="K79-bg-AaZ" secondAttribute="leading" constant="20" id="RMU-1i-AGc"/>
+                            <constraint firstItem="Qs3-SC-npX" firstAttribute="leading" secondItem="K79-bg-AaZ" secondAttribute="leading" id="bX6-mZ-p0D"/>
+                            <constraint firstItem="K79-bg-AaZ" firstAttribute="trailing" secondItem="qe8-6X-lGF" secondAttribute="trailing" constant="20" id="i3W-o7-0W4"/>
+                            <constraint firstItem="Qs3-SC-npX" firstAttribute="top" secondItem="K79-bg-AaZ" secondAttribute="top" id="oXT-Du-T3w"/>
+                            <constraint firstItem="qe8-6X-lGF" firstAttribute="top" secondItem="Qs3-SC-npX" secondAttribute="bottom" constant="10" id="xq9-r4-Q4g"/>
+                            <constraint firstItem="qe8-6X-lGF" firstAttribute="bottom" secondItem="K79-bg-AaZ" secondAttribute="bottom" constant="20" id="zQv-Ld-HlL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K79-bg-AaZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="MusicTable" destination="Qs3-SC-npX" id="uBg-uN-M3e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8T-Kd-KMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-514.49275362318849" y="15.401785714285714"/>
+        </scene>
+    </scenes>
+</document>
