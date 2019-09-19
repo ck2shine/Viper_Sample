@@ -17,7 +17,25 @@
 		142070B92332779B0082E25A /* MusicProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142070B82332779B0082E25A /* MusicProtocol.swift */; };
 		142070BC233278D50082E25A /* MusicStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142070BB233278D50082E25A /* MusicStoryboard.storyboard */; };
 		142070BE233278F20082E25A /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142070BD233278F20082E25A /* MusicViewController.swift */; };
+		142070C02333C2350082E25A /* MusicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142070BF2333C2350082E25A /* MusicInteractor.swift */; };
+		142070C32333C6690082E25A /* MusicNetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142070C22333C6690082E25A /* MusicNetAPI.swift */; };
+		142070C72333C73C0082E25A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142070C52333C7390082E25A /* Alamofire.framework */; };
+		142070C82333C73C0082E25A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 142070C52333C7390082E25A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		142070C92333C73C0082E25A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				142070C82333C73C0082E25A /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		14207099233269AF0082E25A /* ViperBasicPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperBasicPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +50,9 @@
 		142070B82332779B0082E25A /* MusicProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProtocol.swift; sourceTree = "<group>"; };
 		142070BB233278D50082E25A /* MusicStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicStoryboard.storyboard; sourceTree = "<group>"; };
 		142070BD233278F20082E25A /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		142070BF2333C2350082E25A /* MusicInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInteractor.swift; sourceTree = "<group>"; };
+		142070C22333C6690082E25A /* MusicNetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicNetAPI.swift; sourceTree = "<group>"; };
+		142070C52333C7390082E25A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142070C72333C73C0082E25A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +72,7 @@
 			children = (
 				1420709B233269AF0082E25A /* ViperBasicPractice */,
 				1420709A233269AF0082E25A /* Products */,
+				142070C42333C7390082E25A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +87,7 @@
 		1420709B233269AF0082E25A /* ViperBasicPractice */ = {
 			isa = PBXGroup;
 			children = (
+				142070C12333C6510082E25A /* NetAPI */,
 				142070BA233278BC0082E25A /* storyboards */,
 				142070B5233277290082E25A /* Protocols */,
 				142070AF23326A580082E25A /* Router */,
@@ -99,6 +123,7 @@
 		142070B023326A5F0082E25A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				142070BF2333C2350082E25A /* MusicInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -135,6 +160,22 @@
 			path = storyboards;
 			sourceTree = "<group>";
 		};
+		142070C12333C6510082E25A /* NetAPI */ = {
+			isa = PBXGroup;
+			children = (
+				142070C22333C6690082E25A /* MusicNetAPI.swift */,
+			);
+			path = NetAPI;
+			sourceTree = "<group>";
+		};
+		142070C42333C7390082E25A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				142070C52333C7390082E25A /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +186,7 @@
 				14207095233269AF0082E25A /* Sources */,
 				14207096233269AF0082E25A /* Frameworks */,
 				14207097233269AF0082E25A /* Resources */,
+				142070C92333C73C0082E25A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,9 +251,11 @@
 			files = (
 				142070BE233278F20082E25A /* MusicViewController.swift in Sources */,
 				142070B7233277820082E25A /* MusicPresenter.swift in Sources */,
+				142070C02333C2350082E25A /* MusicInteractor.swift in Sources */,
 				1420709F233269AF0082E25A /* ViewController.swift in Sources */,
 				1420709D233269AF0082E25A /* AppDelegate.swift in Sources */,
 				142070B92332779B0082E25A /* MusicProtocol.swift in Sources */,
+				142070C32333C6690082E25A /* MusicNetAPI.swift in Sources */,
 				142070B4233273E60082E25A /* MusicModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

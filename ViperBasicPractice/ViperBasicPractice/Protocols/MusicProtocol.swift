@@ -8,3 +8,24 @@
 
 import Foundation
 
+protocol PresenterCallViewProtocol {
+    
+}
+
+protocol ViewCallPresenterProtocol {
+    
+}
+
+protocol PresenterCallRouterProtocol {
+    
+}
+
+protocol PresenterCallInteractorProtocol{
+    
+    func fetchMusicData()
+    
+}
+
+protocol InteractorCallPresenterProtocol {
+    
+}

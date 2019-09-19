@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class MusicPresenter{
+    var router : PresenterCallRouterProtocol?
+    
+    var view : PresenterCallViewProtocol?
+    
+    var interactor : PresenterCallInteractorProtocol?
+}
+
+extension MusicPresenter : InteractorCallPresenterProtocol
+{
+    
+}
